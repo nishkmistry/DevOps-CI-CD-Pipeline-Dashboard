@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>DevOps CI/CD Pipeline Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="top-header">
+<h1>DevOps CI/CD Pipeline Dashboard</h1>
+<p>Web Programming Mini Project</p>
+</header>
+
+<main class="dashboard">
+<section class="card">
+    <h2>Build Performance</h2>
+    <div class="card-section bar-chart">
+        <div class="bar">
+            <span>Success</span>
+            <div class="bar-track">
+                <div class="bar-fill success-bar"></div>
+            </div>
+            <small>75%</small>
+        </div>
+
+        <div class="bar">
+            <span>Failed</span>
+            <div class="bar-track">
+                <div class="bar-fill fail-bar"></div>
+            </div>
+            <small>25%</small>
+        </div>
+    </div>
+</section>
+
+<section class="card">
+<h2>Build Status</h2>
+<div class="card-section">
+<p>Total Builds: 20</p>
+<p>Successful Builds: 15</p>
+<p>Failed Builds: 5</p>
+</div>
+</section>
+
+<section class="card">
+<h2>Deployment Status</h2>
+<div class="card-section">
+<table>
+<tr>
+<th>Environment</th>
+<th>Status</th>
+<th>Last Deployment</th>
+</tr>
+<tr>
+<td>Development</td>
+<td class="success">Success</td>
+<td>10 Sept</td>
+</tr>
+<tr>
+<td>Testing</td>
+<td class="fail">Failed</td>
+<td>11 Sept</td>
+</tr>
+<tr>
+<td>Production</td>
+<td class="success">Success</td>
+<td>12 Sept</td>
+</tr>
+</table>
+</div>
+</section>
+
+<section class="card">
+<h2>Deployment Success Rate</h2>
+<div class="card-section">
+<div class="progress">
+<div class="progress-bar">75%</div>
+</div>
+</div>
+</section>
+
+<section class="card">
+<h2>Recent Pipeline Runs</h2>
+<div class="card-section">
+<ul>
+<li>Build #101 – Success</li>
+<li>Build #102 – Failed</li>
+<li>Build #103 – Success</li>
+<li>Build #104 – Success</li>
+</ul>
+</div>
+</section>
+
+<section class="card">
+<h2>Pipeline Stages</h2>
+<div class="card-section stages">
+<span>Code</span>
+<span>Build</span>
+<span>Test</span>
+<span>Deploy</span>
+<span>Monitor</span>
+</div>
+</section>
+
+<section class="card">
+<h2>Environment Health</h2>
+<div class="card-section env">
+<span class="prod">Production ✓</span>
+<span class="stag">Staging ✓</span>
+<span class="dev">Development ✓</span>
+</div>
+</section>
+
+</main>
+
+<footer class="footer">
+Developed using HTML & CSS | Web Programming TG1
+</footer>
+
+</body>
+</html>
