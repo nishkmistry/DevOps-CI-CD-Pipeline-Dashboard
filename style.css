@@ -1,0 +1,174 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background-color: #cbd5e1;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-header {
+    background-color: #0f172a;
+    color: #ffffff;
+    text-align: center;
+    padding: 40px 20px;
+    border-bottom: 5px solid #3b82f6;
+}
+
+.dashboard {
+    flex: 1;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 25px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.card {
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #1e293b;
+    text-transform: uppercase;
+}
+
+.card-section {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.runs-list ul {
+    list-style-position: inside;
+    padding-left: 10px;
+}
+
+.runs-list li {
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.env {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.env span {
+    padding: 10px 12px;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    font-size: 13px;
+    text-align: center;
+    flex: 1 1 calc(33% - 10px);
+    min-width: 100px;
+}
+
+.prod { background-color: #16a34a; }
+.stag { background-color: #ea580c; }
+.dev  { background-color: #2563eb; }
+
+.stages {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.stages span {
+    background-color: #2563eb;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 10px 0;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.success {
+    color: #15803d;
+    font-weight: bold;
+}
+
+.fail {
+    color: #b91c1c;
+    font-weight: bold;
+}
+
+.footer {
+    background-color: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.bar-chart {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.bar {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-weight: 600;
+}
+
+.bar-track {
+    width: 100%;
+    height: 18px;
+    background-color: #cbd5e1;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.bar-fill {
+    height: 100%;
+    width: 0;
+    border-radius: 10px;
+    animation: growBar 2s ease forwards;
+}
+
+.success-bar {
+    background-color: #16a34a;
+    animation-delay: 0.2s;
+    animation-name: successGrow;
+}
+
+.fail-bar {
+    background-color: #dc2626;
+    animation-delay: 0.4s;
+    animation-name: failGrow;
+}
+
+@keyframes successGrow {
+    from { width: 0; }
+    to   { width: 75%; }
+}
+
+@keyframes failGrow {
+    from { width: 0; }
+    to   { width: 25%; }
+}
